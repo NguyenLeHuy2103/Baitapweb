@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+   <style>
+   body {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0.5,
+      "ELSH" 0,
+      "ELXP" 0;
+  }
+    /* menu ngang */
+    .menu-ngang{
+        background-color: aqua;
+        list-style: none;
+        min-height: 30px;
+        display: flex;
+        width: fit-content;
+    }
+    .menu-ngang li{
+        line-height: 30px;
+        margin-left: 30px;
+        transition: background-color 0.4s ease-in-out ;
+    }
+    .menu-ngang li a{
+            text-decoration: none;
+            border-radius: 5px;
+            display: block;
+            height: 100%;
+     }
+     .menu-ngang li a:hover{
+            background-color: yellow ;
+            font-weight: 700;
+            
+        }
+        /* menu dọc */
+        .menu-doc{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .menu-doc li{
+            margin: 0;
+            padding: 10px;
+            background-color: rgb(0, 119, 255);
+            border-bottom: white solid 5px;
+            transition: background-color 0.3s ease-in-out, filter 0.3s, trasform 0.3s ease-in-out;
+
+        }
+
+        .menu-doc li:hover{
+            filter: brightness(130%);
+            color: aquamarine;
+            font-style: italic;
+        }
+
+   </style>
+<body>
+ 
+    <!-- menu ngang -->
+<ul class="menu-ngang">
+    <li><a href="">Trang chủ</a></li>
+    <li><a href="">Giới thiệu</a></li>
+    <li><a href="">Sản phẩm</a></li>
+    <li><a href="">Dịch vụ</a></li>
+    <li><a href="">Liên hệ</a></li>
+</ul>
+    <!-- menu dọc -->
+    <ul class="menu-doc">
+        <li><a href="">Trang chủ</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="">Sản phẩm</a></li>
+        <li><a href="">Dịch vụ</a></li>
+        <li><a href="">Liên hệ</a></li>
+    </ul>
+</body>
+</html>
