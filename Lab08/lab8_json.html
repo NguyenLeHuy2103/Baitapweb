@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 08 - JSON</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            width: 600px;
+            border: 4px solid black;
+            background-color: #e8e8e8;
+            padding: 20px 30px 30px 30px;
+        }
+
+        .card-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            border: 1px solid #888;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 2; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-title">User Information</div>
+        <div class="info-box" id="user-info">
+            </div>
+    </div>
+
+    <script>
+        const userJsonString = `{
+            "name": "Nguyễn Văn A",
+            "age": 30,
+            "email": "nguyenvana@stu.edu.vn",
+            "address": "Ho Chi Minh, NY 10001"
+        }`;
+
+        const userObject = JSON.parse(userJsonString);
+
+        const userInfoDiv = document.getElementById("user-info");
+
+        userInfoDiv.innerHTML = `
+            <div><strong>Name:</strong> ${userObject.name}</div>
+            <div><strong>Age:</strong> ${userObject.age}</div>
+            <div><strong>Email:</strong> ${userObject.email}</div>
+            <div><strong>Address:</strong> ${userObject.address}</div>
+        `;
+    </script>
+
+</body>
+</html>
